@@ -1,0 +1,216 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+:root {
+  /* PRIMARY */
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+
+  /* GRADIENTS */
+  --light-slate-blue-from: hsl(252, 100%, 67%);
+  --light-slate-blue-to: hsl(241, 81%, 54%);
+  --circle-gradient-from: hsla(241, 72%, 46%, 0);
+  --circle-gradient-to: hsla(256, 72%, 46%, 1);
+
+  /* NEUTRAL*/
+
+  --white-color: hsl(0, 0%, 100%);
+  --pale-blue-color: hsl(221, 100%, 96%);
+  --light-lavender-color: hsl(241, 100%, 89%);
+  --dark-gray-blue-color: hsl(224, 30%, 27%);
+}
+@font-face {
+  font-family: "HankenGrotesk";
+  src: url("assets/fonts/HankenGrotesk-VariableFont_wght.ttf")
+    format("woff2-variations");
+  font-weight: 500 700 800;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: "HankenGrotesk";
+  padding: 0;
+  margin: 0;
+  color: var(--white-color);
+}
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.container {
+  width: min(800px, 95%);
+  margin: 0 auto;
+}
+.btn {
+  display: inline-block;
+  background-color: var(--dark-gray-blue-color);
+  padding: 1em 3em;
+  border-radius: 1.8em;
+  width: min(100%, 800px);
+  text-align: center;
+  color: var(--white-color);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.btn:hover,
+.btn:active {
+  background: linear-gradient(
+    var(--light-slate-blue-from),
+    var(--light-slate-blue-to)
+  );
+}
+.summary__btn {
+  margin-top: 0.5em;
+  flex: 1;
+}
+.result {
+  background: linear-gradient(
+    180deg,
+    var(--light-slate-blue-from),
+    var(--light-slate-blue-to)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 3em;
+  border-radius: 0 0 1.5em 1.5em;
+}
+.result__title {
+  padding: 0.5em 0;
+}
+.result__score {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+.result__score::before {
+  content: "";
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  background: linear-gradient(
+    10deg,
+    var(--circle-gradient-from),
+    var(--circle-gradient-to)
+  );
+  border-radius: 50%;
+  z-index: -1;
+}
+.result-max-number {
+  color: var(--light-lavender-color);
+}
+.result__conclusion {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.result__grade {
+  font-size: 1.4rem;
+}
+.result__comparison {
+  font-size: 0.9rem;
+  color: var(--light-lavender-color);
+  text-align: center;
+  padding: 1em 1em;
+}
+.section-title {
+  color: var(--light-lavender-color);
+}
+.summary {
+  background-color: var(--white-color);
+  border-radius: 0 1.5em 1.5em 0;
+  padding: 1em;
+}
+.summary__title {
+  color: var(--dark-gray-blue-color);
+  padding: 1em 0;
+}
+.summary__stats-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8em;
+  margin-bottom: 0.8em;
+  border-radius: 0.5em;
+}
+.result-text {
+  color: gray;
+  font-weight: 500;
+}
+.result-obtained {
+  display: flex;
+  gap: 0.5em;
+  font-weight: 500;
+}
+.item-reaction {
+  color: var(--light-red);
+  background-color: hsl(0, 100%, 95%);
+}
+.item-memory {
+  color: var(--orangey-yellow);
+  background-color: hsl(39, 100%, 95%);
+}
+.item-verbal {
+  color: var(--green-teal);
+  background-color: hsl(166, 100%, 95%);
+}
+.item-visual {
+  color: var(--cobalt-blue);
+  background-color: hsl(234, 85%, 95%);
+}
+.font-color-dark {
+  font-weight: 800;
+  color: var(--dark-gray-blue-color);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 700px) {
+  .result {
+    width: min(500px, 90%);
+    margin: 0 auto;
+    border-radius: 1.5em;
+  }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .content-holder {
+    display: flex;
+    gap: 1em;
+    background-color: var(--white-color);
+    box-shadow: 2em 0 3em hsl(224, 30%, 90%);
+    border-radius: 1.5em;
+  }
+}
+@media (max-width: 700px) {
+  body > .container {
+    width: auto;
+  }
+}

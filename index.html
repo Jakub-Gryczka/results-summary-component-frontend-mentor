@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style></style>
+  </head>
+  <body>
+    <div class="container wrapper">
+      <div class="content-holder">
+      <main class="result">
+        <h3 class="result__title section-title">Your Result</h3>
+        <div class="result__score">
+          <h1 class="result-number">76</h1>
+          <p class="result-max-number">of 100</p>
+        </div>
+        <div class="result__conclusion">
+          <h2 class="result__grade">Great</h2>
+          <p class="result__comparison">
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
+      </main>
+      <section class="summary container">
+        <h3 class="summary__title section-title">Summary</h3>
+        <ul class="summary__stats">
+          <li class="summary__stats-item item-reaction">
+            <div class="result-obtained">
+              <img src="assets/images/icon-reaction.svg" alt="" />
+              <p>Reaction</p>
+            </div>
+            <p class="result-text">
+              <span class="font-color-dark">80</span> / 100
+            </p>
+          </li>
+          <li class="summary__stats-item item-memory">
+            <div class="result-obtained">
+              <img src="assets/images/icon-memory.svg" alt="" />
+              <p>Memory</p>
+            </div>
+            <p class="result-text">
+              <span class="font-color-dark">92</span> / 100
+            </p>
+          </li>
+          <li class="summary__stats-item item-verbal">
+            <div class="result-obtained">
+              <img src="assets/images/icon-verbal.svg" alt="" />
+              <p>Verbal</p>
+            </div>
+            <p class="result-text">
+              <span class="font-color-dark">61</span> / 100
+            </p>
+          </li>
+          <li class="summary__stats-item item-visual">
+            <div class="result-obtained">
+              <img src="assets/images/icon-visual.svg" alt="" />
+              <p>Visual</p>
+            </div>
+            <p class="result-text">
+              <span class="font-color-dark">72</span> / 100
+            </p>
+          </li>
+        </ul>
+        <div>
+          <a href="#" class="btn summary__btn">Continue</a>
+        </div>
+      </section>
+    </div>
+    </div>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>. -->
+    </div>
+  </body>
+</html>
